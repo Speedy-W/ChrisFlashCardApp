@@ -26,7 +26,7 @@
         android:layout_centerHorizontal="true"
         android:text="Barack Obama"
         android:textSize="40dp"
-
+        android:visibility="invisible"
         />
 
 
