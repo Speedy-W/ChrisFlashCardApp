@@ -1,4 +1,4 @@
-## Chris' FlashCard App
+ ## Chris' FlashCard App
 
 ## Lab 2
 
@@ -32,7 +32,7 @@ App asks "Who is the 44th President of the United States" after click shows "Bar
 ### App Walk-though
 
 
-<img src=""https://github.com/Speedy-W/ChrisFlashCardApp/raw/master/Lab1.gif"" width=200><br>
+<img src="https://github.com/Speedy-W/ChrisFlashCardApp/raw/master/Lab1.gif" width=200><br>
 
 
 
