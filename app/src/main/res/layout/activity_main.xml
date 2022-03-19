@@ -7,9 +7,10 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
         android:id="@+id/Flashcard_Question"
+        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="Who is the 44th President of the United States?"
         android:textSize="40sp"
         android:gravity="center"
@@ -22,13 +23,22 @@
         android:id="@+id/Answer"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:gravity="center"
         android:layout_centerHorizontal="true"
+        android:gravity="center"
         android:text="Barack Obama"
         android:textSize="40dp"
-        android:visibility="invisible"
-        />
+        android:visibility="invisible" />
 
+    <ImageView
+        android:id="@+id/Plus_Sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/plus_sign"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        />
 
 
 
