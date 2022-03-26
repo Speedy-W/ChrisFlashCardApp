@@ -39,6 +39,17 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         />
+    <ImageView
+        android:id="@+id/Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/next"
+        android:layout_below="@+id/Flashcard_Question"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+
+        />
+
 
 
 
