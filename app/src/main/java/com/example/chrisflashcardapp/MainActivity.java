@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     TextView Answer;
 
     FlashcardDatabase flashcardDatabase;
+    Flashcard currentCard;
     List< Flashcard> allFlashcards;
     int cardIndex = 0;
 
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             Answer.setText( first.getAnswer() );
         }
 
+
         findViewById( R.id.Next).setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,15 +73,36 @@ public class MainActivity extends AppCompatActivity {
 
                 if(cardIndex >=allFlashcards.size()){
                     Snackbar.make(view,
-                            "You've  reached the end of the card! Going back to the start",
+                            "You've reached the end of the card! Going back to the start",
                             Snackbar.LENGTH_SHORT).show();
                     cardIndex = 0;
 
                 }
-
-                Flashcard currentCard =   allFlashcards.get( cardIndex );
+                currentCard = allFlashcards.get( cardIndex );
                 FlashcardQuestion.setText( currentCard.getQuestion() );
                 Answer.setText( currentCard.getAnswer() );
+            }
+        } );
+        findViewById( R.id.Delete ).setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                flashcardDatabase.deleteCard(((TextView) findViewById(R.id.Flashcard_Question)).getText().toString());
+
+                if(cardIndex > 1){
+                    cardIndex--;
+                    allFlashcards = flashcardDatabase.getAllCards();
+                    currentCard = allFlashcards.get( cardIndex );
+                    FlashcardQuestion.setText( currentCard.getQuestion() );
+                    Answer.setText( currentCard.getAnswer() );
+                }
+                else{
+                    Snackbar.make(view,
+                            "You have no cards left!",
+                            Snackbar.LENGTH_SHORT).show();
+                    FlashcardQuestion.setText( "Add a card!" );
+                    Answer.setText( "Please add a card!" );
+                }
+
             }
         } );
     }
