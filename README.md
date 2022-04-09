@@ -3,7 +3,7 @@
 ## Lab 4
 
 ### App Description
-`TODO://` Added animations to my Flashcard App
+Added animations to my Flashcard App
 
 ### App Walk-though
 
