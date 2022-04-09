@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 final Animation rightInAnim = AnimationUtils.loadAnimation(view.getContext(), R.anim.right_in);
 
                 findViewById(R.id.Flashcard_Question).startAnimation(leftOutAnim);
+
                 leftOutAnim.setAnimationListener(new Animation.AnimationListener() {
                     @Override
                     public void onAnimationStart(Animation animation) {

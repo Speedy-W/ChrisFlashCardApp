@@ -60,8 +60,6 @@
         android:layout_below="@id/Flashcard_Question"
         android:layout_centerHorizontal="true"
         android:src="@drawable/delete"
-
-
         />
 
 
